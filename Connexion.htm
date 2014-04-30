@@ -1,0 +1,790 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Connexion</title>
+<link href="Connexion_fichiers/shared_global.css" rel="stylesheet" type="text/css">
+<link href="Connexion_fichiers/styles_storev5.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 6]> <link href="https://steamstore-a.akamaihd.net/public/css/styles_storev5_ie6.css?v=1964654494" rel="stylesheet" type="text/css" >
+ <![endif]-->
+<!--[if lte IE 7]> <style type="text/css"> .iepopupfix{ display: block; } </style> <![endif]-->
+<script src="Connexion_fichiers/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="Connexion_fichiers/swfobject.js"></script>
+
+<script type="text/javascript" src="Connexion_fichiers/prototype-1.js"></script>
+
+<script type="text/javascript" src="Connexion_fichiers/scriptaculous.js"></script><script type="text/javascript" src="Connexion_fichiers/effects.js"></script><script type="text/javascript" src="Connexion_fichiers/controls.js"></script><script type="text/javascript" src="Connexion_fichiers/slider.js"></script>
+
+<script type="text/javascript" src="Connexion_fichiers/javascript.js"></script>
+
+<script type="text/javascript" src="Connexion_fichiers/main.js"></script>
+
+<script type="text/javascript" src="Connexion_fichiers/jquery-1.js"></script>
+
+<script type="text/javascript" src="Connexion_fichiers/tooltip.js"></script>
+
+<script type="text/javascript" src="Connexion_fichiers/shared_global.js"></script>
+
+<script type="text/javascript">
+$J = jQuery.noConflict();
+jQuery(document).ready(function($) { $J.data( document, 'x_readytime', new Date().getTime() ); 
+$J.data( document, 'x_oldref', GetNavCookie() ); 
+$('.tooltip').tooltip(); $('.supernav').tooltip({'location':'bottom', 'tooltipClass': 'supernav_content', 'offsetY':-4, 'offsetX': 1, 'horizontalSnap': 4, 'tooltipParent': '#supernav'});
+window.BindStoreTooltip = function( $Selector ) { $Selector.tooltip( {'tooltipClass': 'store_tooltip', 'dataName': 'storeTooltip' } ); };
+BindStoreTooltip( $('[data-store-tooltip]') ); 
+});</script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33786258-1']);
+  _gaq.push(['_setSampleRate', '0.4']);
+  _gaq.push(['_setCustomVar', 1, 'Logged In', 'false', 2]);
+  _gaq.push(['_setCustomVar', 2, 'Client Type', 'External', 2]);
+  _gaq.push(['_setCustomVar', 3, 'Cntrlr', 'login', 3]);
+  _gaq.push(['_setCustomVar', 4, 'Method', "login\/');", 3]);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_setSessionCookieTimeout', 900000]);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<link href="Connexion_fichiers/styles_cartv5.css" rel="stylesheet" type="text/css">
+<link href="Connexion_fichiers/styles_loginv5.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="Connexion_fichiers/submitonenter.js"></script>
+<script type="text/javascript" src="Connexion_fichiers/jsbn.js"></script>
+<script type="text/javascript" src="Connexion_fichiers/rsa.js"></script>
+<script type="text/javascript" src="Connexion_fichiers/modal.js"></script>
+<script type="text/javascript" src="Connexion_fichiers/login.js"></script>
+<script language="Javascript">
+Event.observe( window, 'dom:loaded', function() {
+	
+			document.forms['logon'].elements['username'].focus();
+	
+	} );
+</script></head>
+
+<body>
+
+<!-- Header -->
+<div id="global_header">
+	<div class="content">
+	
+		<div class="logo">
+			<span id="logo_holder">
+				<a href="http://store.steampowered.com/">
+					<img src="Connexion_fichiers/globalheader_logo.png" height="44" width="176">
+				</a>
+			</span>
+			<!--[if lt IE 7]>
+			<style type="text/css">
+			#logo_holder img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+			#logo_holder { display: inline-block; width: 176px; height: 44px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://steamstore-a.akamaihd.net/public/images/v5/globalheader_logo.png'); }
+			</style>
+			<![endif]-->
+		</div>
+
+		<div style="position: absolute; left: 200px;" id="supernav">
+	<a class="menuitem supernav" href="http://store.steampowered.com/" data-tooltip-content="
+		&lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/&quot;&gt;À la une&lt;/a&gt;
+		&lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/news/&quot;&gt;Actualités&lt;/a&gt;
+		&lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/recommended/&quot;&gt;Recommandations&lt;/a&gt;
+		&lt;a class=&quot;submenuitem&quot; href=&quot;http://steamcommunity.com/my/wishlist/&quot;&gt;Liste de souhaits&lt;/a&gt;
+		&lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/stats/&quot;&gt;STATS&lt;/a&gt;
+	">
+		MAGASIN	</a>
+
+
+	<a class="menuitem supernav" style="display: block" href="http://steamcommunity.com/" data-tooltip-content="
+					&lt;a class=&quot;submenuitem&quot; href=&quot;http://steamcommunity.com/&quot;&gt;Accueil&lt;/a&gt;
+					&lt;a class=&quot;submenuitem&quot; href=&quot;http://steamcommunity.com/discussions/&quot;&gt;DISCUSSIONS&lt;/a&gt;
+					&lt;a class=&quot;submenuitem&quot; href=&quot;http://steamcommunity.com/workshop/&quot;&gt;Workshop&lt;/a&gt;
+					&lt;a class=&quot;submenuitem&quot; href=&quot;http://steamcommunity.com/greenlight/&quot;&gt;Greenlight&lt;/a&gt;
+					&lt;a class=&quot;submenuitem&quot; href=&quot;http://steamcommunity.com/market/&quot;&gt;Marché&lt;/a&gt;
+													">
+
+		Communauté	</a>
+
+	
+
+	
+	<a class="menuitem" href="http://store.steampowered.com/about/">
+		À PROPOS	</a>
+
+	<a class="menuitem" href="http://support.steampowered.com/">
+		SUPPORT	</a>
+</div>
+<script type="text/javascript">
+	jQuery(document).ready(function($) { 
+		$('.tooltip').tooltip();
+		$('.supernav').tooltip({'location':'bottom', 'tooltipClass': 'supernav_content', 'offsetY':-4, 'offsetX': 1, 'horizontalSnap': 4, 'tooltipParent': '#supernav', 'correctForScreenSize': false});
+	});
+</script>
+		<div id="global_actions">
+						<div id="global_action_menu">
+									<div class="header_installsteam_btn header_installsteam_btn_green">
+						<div class="header_installsteam_btn_leftcap"></div>
+						<div class="header_installsteam_btn_rightcap"></div>
+						<a class="header_installsteam_btn_content" href="http://store.steampowered.com/about/?snr=1_60_4__11">
+							Installer Steam						</a>
+					</div>
+													<a class="global_action_link" href="http://store.steampowered.com/login/?snr=1_60_4__11">connexion</a>
+					&nbsp;|&nbsp; 
+					<span class="pulldown global_action_link" id="language_pulldown" onclick="ShowMenu( this, 'language_dropdown', 'right' );">langue</span>
+					<div class="popup_block" id="language_dropdown" style="display: none;">
+						<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>						<div class="popup_body popup_menu shadow_content">
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=bulgarian">Български (Bulgare)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=czech">čeština (Tchèque)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=danish">Dansk (Danois)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=dutch">Nederlands (Néerlandais)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=english">English (Anglais)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=finnish">Suomi (Finnois)</a>
+																															<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=greek">Ελληνικά (Grec)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=german">Deutsch (Allemand)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=hungarian">Magyar (Hongrois)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=italian">Italiano (Italien)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=japanese">日本語 (Japonais)</a>
+																															<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=koreana">한국어 (Coréen)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=norwegian">Norsk (Norvégien)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=polish">Polski (Polonais)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=portuguese">Português (Portugais)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=brazilian">Português-Brasil (Portugais du Brésil)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=russian">Русский (Russe)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=romanian">Română (Roumain)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=schinese">简体中文 (Chinois simplifié)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=spanish">Español (Espagnol)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=swedish">Svenska (Suédois)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=tchinese">繁體中文 (Chinois traditionnel)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=thai">ไทย (Thai)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=turkish">Türkçe (Turc)</a>
+																							<a class="popup_menu_item tight" href="https://store.steampowered.com/login/%27%29;?l=ukrainian">Українська (Ukrainien)</a>
+														<a class="popup_menu_item tight" href="http://translation.steampowered.com/" target="_blank">Aidez-nous à traduire Steam</a>
+						</div>
+					</div>
+							</div>
+		</div>
+			</div>
+</div><div id="store_header">
+	<div class="content">
+		<div id="store_controls">
+			<div id="cart_status_data">
+																<div class="store_header_btn_green store_header_btn" id="store_header_cart_btn" style="display: none;">
+					<div class="store_header_btn_caps store_header_btn_leftcap"></div>
+					<div class="store_header_btn_caps store_header_btn_rightcap"></div>
+					<a id="cart_link" class="store_header_btn_content" href="http://store.steampowered.com/cart/?snr=1_60_4__12">
+						Panier						(<span id="cart_item_count_value">0</span>)
+					</a>
+				</div>
+							</div>
+		</div>
+				<div id="store_nav_area">
+			<div class="store_nav_leftcap"></div>
+			<div class="store_nav_bg">
+				<div class="store_nav">
+					<a class="tab " href="http://store.steampowered.com/?snr=1_60_4__12">
+								<span>À la une					</span></a>
+										<div class="tab  flyout_tab" id="genre_tab" onmouseover="FlyoutMenu( 'genre_tab', 'genre_flyout', 'left', 'bottom' );" onmouseout="HideFlyoutMenu( event, 'genre_tab', 'genre_flyout' );">
+						<span class="pulldown">Jeux<span></span></span>
+
+					</div>
+					<div class="popup_block flyout_tab_flyout" id="genre_flyout" style="display: none;" onmouseout="HideFlyoutMenu( event, 'genre_tab', 'genre_flyout' );">
+						<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>						<div class="popup_body popup_menu shadow_content">
+																						<a class="popup_menu_item" href="http://store.steampowered.com/genre/Free%20to%20Play/?snr=1_60_4__12">
+									Gratuit								</a>
+																																																																								
+																																																																								
+																																																																								
+																																																																								
+																						<a class="popup_menu_item" href="http://store.steampowered.com/genre/Early%20Access/?snr=1_60_4__12">
+									Accès anticipé								</a>
+																						<div class="hr"></div>
+							<div class="popup_menu_subheader">Parcourir par genre :</div>
+																																							<a class="popup_menu_item" href="http://store.steampowered.com/genre/Action/?snr=1_60_4__12">
+										Action									</a>
+																																<a class="popup_menu_item" href="http://store.steampowered.com/genre/Adventure/?snr=1_60_4__12">
+										Aventure									</a>
+																																<a class="popup_menu_item" href="http://store.steampowered.com/genre/Strategy/?snr=1_60_4__12">
+										Stratégie									</a>
+																																<a class="popup_menu_item" href="http://store.steampowered.com/genre/RPG/?snr=1_60_4__12">
+										RPG									</a>
+																																<a class="popup_menu_item" href="http://store.steampowered.com/genre/Indie/?snr=1_60_4__12">
+										Indépendant									</a>
+																																<a class="popup_menu_item" href="http://store.steampowered.com/genre/Massively%20Multiplayer/?snr=1_60_4__12">
+										Massivement multijoueur									</a>
+																																<a class="popup_menu_item" href="http://store.steampowered.com/genre/Casual/?snr=1_60_4__12">
+										Petit jeu									</a>
+																																<a class="popup_menu_item" href="http://store.steampowered.com/genre/Simulation/?snr=1_60_4__12">
+										Simulation									</a>
+																																<a class="popup_menu_item" href="http://store.steampowered.com/genre/Racing/?snr=1_60_4__12">
+										Course automobile									</a>
+																																<a class="popup_menu_item" href="http://store.steampowered.com/genre/Sports/?snr=1_60_4__12">
+										Sport									</a>
+																																																																								
+																																																																								
+																																																			<div class="hr"></div>
+								<div class="popup_menu_subheader">
+									<div class="popup_menu_hint" data-store-tooltip="Cette liste a été créée à partir des tags les plus populaires assignés par la communauté à des jeux. Cliquez pour plus de détails.">(<a href="http://store.steampowered.com/tag/">?</a>)</div>
+									Parcourir par tag :								</div>
+								<a class="popup_menu_item" href="http://store.steampowered.com/tag/browse/?snr=1_60_4__12">
+									Voir les tags populaires								</a>
+														<div class="hr"></div>
+							<div class="popup_menu_subheader">Parcourir par plateforme :</div>
+							<a class="popup_menu_item" href="http://store.steampowered.com/browse/mac/?snr=1_60_4__12">
+								Mac OS X							</a>
+							<a class="popup_menu_item" href="http://store.steampowered.com/browse/linux/?snr=1_60_4__12">
+								SteamOS + Linux							</a>
+						</div>
+					</div>
+										<a class="tab " href="http://store.steampowered.com/software/?snr=1_60_4__12">
+						<span>Logiciels</span>
+					</a>
+					<a class="tab " href="http://store.steampowered.com/freestuff/demos/?snr=1_60_4__12">
+						<span>Démos</span>
+					</a>
+
+											<a class="tab " href="http://store.steampowered.com/recommended/?snr=1_60_4__12">
+							<span>Recommandations</span>
+						</a>
+					
+					<a class="tab " href="http://store.steampowered.com/news/?snr=1_60_4__12">
+						<span>ACTUALITÉS</span>
+					</a>
+
+					
+					<div id="store_search">
+						<form id="searchform" name="searchform" method="get" action="http://store.steampowered.com/search/" onsubmit="return SearchSuggestCheckTerm(this);">
+							<input name="snr" value="1_60_4__12" type="hidden">
+							<div class="searchbox">
+								<input id="store_nav_search_term" name="term" class="default" value="rechercher dans le magasin" size="22" autocomplete="off" type="text">
+								<a href="#" id="store_search_link" onclick="var form = $(this).up('form'); if ( form.onsubmit() ) form.submit(); return false;"><img src="Connexion_fichiers/blank.gif"></a>
+							</div>
+						</form>
+					</div>
+					<div id="searchterm_options" class="search_suggest popup_block" style="display: none;">
+						<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>						<div class="popup_body shadow_content" style="border-top: none;">
+							<div id="search_suggestion_contents">
+							</div>
+						</div>
+					</div>
+					<script language="JavaScript">
+						$J( function() { EnableSearchSuggestions( $('searchform').elements['term'], '1_60_4_', 'DZ', 'french', '485152' ); } );
+					</script>
+
+				</div>
+			</div>
+			<div class="store_nav_rightcap"></div>
+		</div>
+			</div>
+</div>
+<script type="text/javascript">
+	var g_AccountID = 0;
+	var g_sessionID = "MTQ2NTk2OTg3OA==";
+	var g_ServerTime = 1398826548;
+
+	$J( InitMiniprofileHovers );
+</script>
+ 
+<!-- End Header -->
+	
+<!-- Main Background -->
+<div id="main">
+	<div id="main_content" class="login_page">
+		
+				
+		<!-- Center Column -->
+
+		<div class="leftcol">
+
+						
+			<div class="checkout_content_box">
+				<div id="error_display" class="checkout_error" style="display: none;">
+				</div>
+				<div class="loginbox">
+					<div class="loginbox_left">
+						<h2>Connexion</h2>
+						<p>Pour un compte Steam existant</p>
+						<br>
+						<form name="logon" action="" method="POST" onsubmit="DoLogin(); return false;">
+							<input name="snr" value="1_60_4__60" type="hidden">
+							<input name="redir" value="http://store.steampowered.com/" type="hidden">
+							<div class="login_row">
+								<div class="input_title">Nom du compte Steam</div>
+								<input class="text_input" name="username" id="input_username" type="text">
+							</div>
+							<div class="login_row">
+								<div class="input_title">Mot de passe</div>
+								<input class="text_input" name="password" id="input_password" type="password">
+							</div>
+														<div class="login_row" id="captcha_entry" style="display: none;">
+								<input id="captchagid" name="captchagid" value="" type="hidden">
+								<div id="captcha_image_row">
+									<img style="float: left;" id="captchaImg" src="" border="0">
+									<div id="captchaRefresh">
+										<a id="captchaRefreshLink" href="javascript:RefreshCaptcha()">Actualiser</a>
+									</div>
+									<div style="clear: left;"></div>
+								</div>
+								<div class="input_title">Saisir les caractères mentionnés ci-dessus</div>
+								<input class="text_input" id="input_captcha" name="captcha_text" type="text">
+							</div>
+							<input name="emailauth" id="emailauth" type="hidden">
+							<input name="emailsteamid" id="emailsteamid" type="hidden">
+							<input name="loginfriendlyname" id="loginfriendlyname" type="hidden">
+						</form>
+					</div>
+					<div class="loginbox_sep">
+					</div>
+					<div class="loginbox_right">
+						<h2>Créer</h2>
+						<p>Un nouveau compte gratuit</p>
+						<br>
+						<p>
+						L'inscription à cet espace d'échanges convivial est gratuite. 
+Continuez pour créer votre compte Steam et profiter de Steam, la 
+première solution numérique pour les joueurs pour  PC et Mac.						</p>
+					</div>
+					<div style="clear: left;"></div>
+					<div class="loginbox_left btn_ctn">
+						<div id="login_btn_signin">
+							<a href="javascript:DoLogin()" class="btn_checkout_green">
+								<div class="leftcap"></div><div class="rightcap"></div>
+								<div class="text">Connexion</div>
+							</a>
+						</div>
+						<div id="login_btn_wait" style="display: none;">
+							<img src="Connexion_fichiers/throbber.gif">
+						</div>
+					</div>
+					<div class="loginbox_right">
+						<a href="https://store.steampowered.com/join/?&amp;snr=1_60_4__62" class="btn_checkout_green">
+							<div class="leftcap"></div><div class="rightcap"></div>
+							<div class="text">Inscription</div>
+						</a>
+					</div>
+					<div style="clear: left;"></div>
+					
+					<div class="loginbox_psn">
+						<div class="loginbox_psn_logo">
+							<a href="http://store.steampowered.com/psn/beginsetup">
+								<img src="Connexion_fichiers/ps_logo.png" border="0" height="53" width="60">
+							</a>
+						</div>
+						<div class="loginbox_psn_text">
+							<h2>Joueurs PlayStation®3</h2>
+							<a href="http://store.steampowered.com/psn/beginsetup">Première connexion à Steam ?</a>
+						</div>
+						<div style="clear: left;"></div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<a href="http://support.steampowered.com/kb_article.php?ref=4988-DHXV-7272" id="link_forgot_password">
+				Mot de passe oublié&nbsp;?			</a>
+				
+		</div>
+		<!-- End Center Column -->
+
+		<!-- Right Column -->
+		<div class="rightcol">
+			<div class="block">
+				<div class="block_header">
+					<h4>POURQUOI REJOINDRE STEAM&nbsp;?</h4>
+				</div>
+				<div class="block_content block_content_inner">
+					<ul id="why_list">
+						<li>Achetez et téléchargez des jeux dans leur version complète.</li>
+						<li>Rejoignez la communauté Steam.</li>
+						<li>Discutez avec vos amis en cours de jeu.</li>
+						<li>Jouez sur les plateformes supportées.</li>
+						<li>Programmez une partie, un tournoi ou un jeu en réseau local.</li>
+						<li>Recevez automatiquement les mises à jour de jeux, et bien plus encore !</li>
+					</ul>
+					<br>
+					<img src="Connexion_fichiers/why_join_preview.jpg" border="0" height="176" width="265">
+					<br><br>
+					<span id="join_sys_req_title">Configuration requise</span>
+					<div id="join_sys_req">
+					Windows XP, Vista ou 7<br>
+512 Mo de RAM<br>
+1 Ghz ou processeur plus rapide<br>
+<br>
+Intel Mac, OS X version Leopard 10.5.8, Snow Leopard 10.6.3 ou ultérieure<br>
+Souris à deux boutons fortement recommandée<br>
+<br>
+1 Go d'espace disque (recommandé)<br>
+Connexion Internet (haut débit recommandé)					</div>					
+					<br><br>
+				</div>
+			</div>
+	  </div>
+		<!-- End Right Column -->
+
+		<div style="clear: both;"></div>
+		
+	</div>
+
+</div>
+<!-- End Main Background -->
+
+
+<!-- Footer -->
+<div id="footer_spacer" class=""></div>
+<div id="footer">
+	<div class="footer_content">
+		<div class="rule"></div>
+		
+		<div id="footer_nav">
+		
+					
+							<span class="pulldown" id="footer_genre_pulldown">
+					ACHAT PAR GENRE				</span>
+				<div class="popup_block" id="footer_genre_dropdown" style="display: none;">
+					<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>					<div class="popup_body popup_menu shadow_content">
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Free%20to%20Play?snr=1_44_44__20">
+								Gratuit							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Action?snr=1_44_44__20">
+								Action							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Adventure?snr=1_44_44__20">
+								Aventure							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Strategy?snr=1_44_44__20">
+								Stratégie							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/RPG?snr=1_44_44__20">
+								RPG							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Indie?snr=1_44_44__20">
+								Indépendant							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Massively%20Multiplayer?snr=1_44_44__20">
+								Massivement multijoueur							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Casual?snr=1_44_44__20">
+								Petit jeu							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Simulation?snr=1_44_44__20">
+								Simulation							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Racing?snr=1_44_44__20">
+								Course automobile							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Sports?snr=1_44_44__20">
+								Sport							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Accounting?snr=1_44_44__20">
+								Comptabilité							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Animation%20%26%20Modeling?snr=1_44_44__20">
+								Animation &amp; Modélisation							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Audio%20Production?snr=1_44_44__20">
+								Production audio							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Design%20%26%20Illustration?snr=1_44_44__20">
+								Conception &amp; Illustration							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Education?snr=1_44_44__20">
+								Éducation							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Photo%20Editing?snr=1_44_44__20">
+								Retouche photo							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Software%20Training?snr=1_44_44__20">
+								Logiciels d'entraînement							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Utilities?snr=1_44_44__20">
+								Utilitaires							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Video%20Production?snr=1_44_44__20">
+								Montage vidéo							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Web%20Publishing?snr=1_44_44__20">
+								Publication Web							</a>
+													<a class="popup_menu_item" href="http://store.steampowered.com/genre/Early%20Access?snr=1_44_44__20">
+								Accès anticipé							</a>
+											</div>
+				</div>
+										<span class="pulldown" id="footer_category_pulldown">
+				ACHAT PAR CATÉGORIES			</span>
+			<div class="popup_block" id="footer_category_dropdown" style="display: none;">
+								<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>				<div class="popup_body popup_menu shadow_content">
+					<a class="popup_menu_item" href="http://store.steampowered.com/freestuff/demos/?snr=1_44_44__21">
+						Démos					</a>
+					<a class="popup_menu_item" href="http://store.steampowered.com/freestuff/videos/?snr=1_44_44__21">
+						Vidéos					</a>
+					<a class="popup_menu_item" href="http://store.steampowered.com/search/?category2=21&amp;snr=1_44_44__21">
+						Contenu téléchargeable					</a>
+					<a class="popup_menu_item" href="http://store.steampowered.com/browse/publishers?snr=1_44_44__21">
+						Catalogues des éditeurs					</a>
+																<a class="popup_menu_item" href="http://store.steampowered.com/browse/ut1?snr=1_44_44__21">
+							Jeux à moins de $10 USD						</a>
+											<a class="popup_menu_item" href="http://store.steampowered.com/browse/ut2?snr=1_44_44__21">
+							Jeux à moins de $5 USD						</a>
+									</div>
+							</div>
+			<span class="pulldown" id="footer_steam_pulldown">
+				À PROPOS DE STEAM			</span>
+			<div class="popup_block" id="footer_steam_dropdown" style="display: none;">
+								<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>				<div class="popup_body popup_menu shadow_content">
+					<a class="popup_menu_item" href="http://store.steampowered.com/about/?snr=1_44_44__22">
+						Qu'est-ce que Steam ?					</a>
+					<!--
+					<a class="popup_menu_item" href="">
+						Téléchargez Steam maintenant					</a>
+					-->
+					<a class="popup_menu_item" href="https://support.steampowered.com/kb_article.php?p_faqid=549#gifts" target="_blank">
+						Cadeaux sur Steam					</a>
+					<a class="popup_menu_item" href="https://steamcommunity.com/?snr=1_44_44__22">
+						La Communauté Steam					</a>
+				</div>
+							</div>
+	
+			<span class="pulldown" id="footer_valve_pulldown">
+				À PROPOS DE VALVE			</span>
+			<div class="popup_block" id="footer_valve_dropdown" style="display: none;">
+				<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>				<div class="popup_body popup_menu shadow_content">
+					<a class="popup_menu_item" href="http://www.valvesoftware.com/about.html" target="_blank">
+						À propos de Valve					</a>
+					<a class="popup_menu_item" href="http://www.valvesoftware.com/business/" target="_blank">
+						Solutions Business					</a>
+					<a class="popup_menu_item" href="http://www.steampowered.com/steamworks/" target="_blank">
+						Steamworks					</a>
+					<a class="popup_menu_item" href="http://source.valvesoftware.com/" target="_blank">
+						Moteur Source					</a>
+					<a class="popup_menu_item" href="https://cafe.steampowered.com/" target="_blank">
+						Cyber cafés					</a>
+					<a class="popup_menu_item" href="http://www.valvesoftware.com/jobs.html" target="_blank">
+						Emplois					</a>
+				</div>
+			</div>
+			
+			
+			<span class="pulldown" id="footer_help_pulldown">
+				AIDE			</span>
+			<div class="popup_block" id="footer_help_dropdown" style="display: none;">
+				<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>								<div class="popup_body popup_menu shadow_content">
+					<a class="popup_menu_item" href="http://support.steampowered.com/" target="_blank">
+						Support					</a>
+					<a class="popup_menu_item" href="http://store.steampowered.com/forums/?snr=1_44_44__23" target="_blank">
+						Forums					</a>
+					<a class="popup_menu_item" href="http://store.steampowered.com/stats/?snr=1_44_44__23" target="_blank">
+						Statistiques					</a>
+				</div>
+							</div>
+			
+			
+			<span class="pulldown" id="footer_tools_pulldown">
+				OUTILS			</span>
+			<div class="popup_block" id="footer_tools_dropdown" style="display: none;">
+				<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>				<div class="popup_body popup_menu shadow_content">
+					<a class="popup_menu_item" href="http://storefront.steampowered.com/download/hldsupdatetool.exe">
+						Outils de mise à jour Windows HLDS					</a>
+					<a class="popup_menu_item" href="http://storefront.steampowered.com/download/hldsupdatetool.bin">
+						Outils de mise à jour Linux HLDS					</a>
+				</div>
+			</div>
+			
+			
+			<span class="pulldown" id="footer_feeds_pulldown">
+				RSS			</span>
+			<div class="popup_block" id="footer_feeds_dropdown" style="display: none;">
+				<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>				<div class="popup_body popup_menu shadow_content">
+					<a class="popup_menu_item" href="http://store.steampowered.com/feeds/news.xml">
+						<img src="Connexion_fichiers/ico_rss2.gif" alt="" align="top" border="0" height="13" width="13">&nbsp;&nbsp;Actualités Steam					</a>
+					<a class="popup_menu_item" href="http://store.steampowered.com/feeds/newreleases.xml">
+						<img src="Connexion_fichiers/ico_rss2.gif" alt="" align="top" border="0" height="13" width="13">&nbsp;&nbsp;Sorties de jeux					</a>
+					<a class="popup_menu_item" href="http://store.steampowered.com/feeds/daily_deals.xml">
+						<img src="Connexion_fichiers/ico_rss2.gif" alt="" align="top" border="0" height="13" width="13">&nbsp;&nbsp;Offres du Jour					</a>
+				</div>
+			</div>
+			<div style="clear: left;"></div>
+			
+			<script type="text/javascript">
+				RegisterFlyout( 'footer_genre_pulldown', 'footer_genre_dropdown', null, null, true );
+				RegisterFlyout( 'footer_category_pulldown', 'footer_category_dropdown', null, null, true );
+				RegisterFlyout( 'footer_steam_pulldown', 'footer_steam_dropdown', null, null, true );
+				RegisterFlyout( 'footer_valve_pulldown', 'footer_valve_dropdown', null, null, true );
+				RegisterFlyout( 'footer_help_pulldown', 'footer_help_dropdown', null, null, true );
+				RegisterFlyout( 'footer_tools_pulldown', 'footer_tools_dropdown', null, null, true );
+				RegisterFlyout( 'footer_feeds_pulldown', 'footer_feeds_dropdown', null, null, true );
+			</script>
+		</div>
+
+		<div class="rule"></div>
+
+		<div class="btn_client_small get_game_on_steam">
+			<a href="http://steamcommunity.com/greenlight" target="_blank">Publiez vos jeux sur Steam</a>
+		</div>
+
+		<div>
+			<a href="http://www.valvesoftware.com/about.html" target="_blank">À propos de Valve</a> 
+			| <a href="http://www.valvesoftware.com/business/" target="_blank">Solutions Business</a> 
+			| <a href="http://www.steampowered.com/steamworks/" target="_blank">Steamworks</a>
+			| <a href="http://source.valvesoftware.com/" target="_blank">Moteur Source</a>
+			| <a href="https://cafe.steampowered.com/" target="_blank">Cyber cafés</a> 
+			| <a href="http://www.valvesoftware.com/jobs.html" target="_blank">Emplois</a>
+		</div>
+
+
+		<div class="rule"></div>
+		<div id="footer_logo"><a href="http://www.valvesoftware.com/" target="_blank"><img src="Connexion_fichiers/logo_valve_footer.jpg" alt="Valve Software" border="0"></a></div>
+		<div id="footer_text">
+			<div>© 2014 Valve Corporation. Tous droits réservés. Les marques 
+citées sont la propriété de leurs détenteurs respectifs, aux États-Unis 
+et dans d'autres pays.</div>
+			<div>TVA incluse pour tous les prix (le cas échéant).</div>
+			<div class="valve_links">
+			<a href="http://store.steampowered.com/privacy_agreement/" target="_blank">Politique de protection de la vie privée</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://www.valvesoftware.com/legal.htm" target="_blank">Mentions légales</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://store.steampowered.com/subscriber_agreement/" target="_blank">Accord de souscription Steam</a>
+							</div>
+		</div>
+	</div>
+</div><!-- End Footer -->
+
+
+<div id="loginAuthCodeModal" class="modal_frame" style="display:none;">
+	<div class="modal_top_band">
+		<div class="modal_close"><a href="javascript:hideModal(%20'loginAuthCodeModal'%20)"><img src="Connexion_fichiers/x9x9.gif" border="0" height="9" width="9"></a></div>
+	</div>
+	<div class="modal_box">
+		<div class="auth_message_area">
+			<div id="auth_icon" class="auth_icon auth_icon_key">
+			</div>
+			<div class="auth_messages" id="auth_messages">
+				<div class="auth_message" id="auth_message_entercode" style="display: none;">
+					<h1>Bonjour !</h1>
+					<p>Nous constatons que vous vous connectez sur Steam à partir d'un 
+nouvel ordinateur ou d'un nouveau navigateur. Ou cela fait un certain 
+temps que vous ne vous êtes pas connecté...</p>
+				</div>
+				<div class="auth_message" id="auth_message_checkspam" style="display: none;">
+					<h1>Confondu avec du spam ?</h1>
+					<p>Avez-vous vérifié dans votre dossier de spam ? Si vous ne voyez 
+pas de message récent du support Steam dans votre boîte, essayez de 
+regarder ici.</p>
+				</div>
+				<div class="auth_message" id="auth_message_success" style="display: none;">
+					<h1>Succès !</h1>
+					<p>Vous avez maintenant accès à votre compte Steam ici.</p>
+				</div>
+				<div class="auth_message" id="auth_message_incorrectcode" style="display: none;">
+					<h1>Oups !</h1>
+					<p>Désolé mais, <br>ce n'est pas tout à fait exact...</p>
+				</div>
+				<div class="auth_message" id="auth_message_help" style="display: none;">
+					<h1>Laissez-nous vous aider !</h1>
+					<p>Désolé pour les problèmes que vous rencontrez. Nous savons 
+combien votre compte Steam est important pour vous, et nous faisons tout
+ notre possible pour vous aider à en garder le contrôle.</p>
+				</div>
+			</div>
+		</div>
+		<div id="auth_details_messages" class="auth_details_messages">
+			<div class="auth_details" id="auth_details_entercode" style="display: none;">
+				En tant que nouvelle mesure de sécurité supplémentaire, vous allez 
+devoir donner accès à ce navigateur en saisissant le code spécial que 
+nous venons de vous faire parvenir à votre adresse chez <span id="emailauth_entercode_emaildomain"></span>.			</div>
+			<div class="auth_details" id="auth_details_success" style="display: none;">
+				S'il s'agit d'un ordinateur public, n'oubliez pas de vous 
+déconnecter de Steam lorsque vous êtes prêt à quitter cette session de 
+navigation.			</div>
+			<div class="auth_details" id="auth_details_help" style="display: none;">
+				Veuillez contacter le support Steam pour recevoir de l'aide d'un 
+membre de notre équipe. Les demandes légitimes d'aide pour accéder à un 
+compte sont notre priorité numéro un.			</div>
+		</div>
+		<div class="authcode_entry_area">
+			<div id="authcode_entry">
+				<div class="authcode_entry_box">
+					<form action="" onsubmit="SubmitAuthCode( 'entrer un nom familier ici' ); return false;">
+						<input class="authcode_entry_input defaulttext" id="authcode" value="entrez votre code ici" onfocus="OnAuthcodeFocus( 'entrez votre code ici');" onblur="OnAuthcodeBlur( 'entrez votre code ici');" type="text">
+						<div id="friendly_name_box" class="friendly_name_box">
+							<input class="authcode_entry_input defaulttext" id="friendlyname" value="entrer un nom familier ici" onfocus="OnFriendlyNameFocus( 'entrer un nom familier ici' );" onblur="OnFriendlyNameBlur( 'entrer un nom familier ici' );" type="text">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="authcode_help_supportlink">
+				<a href="https://support.steampowered.com/kb_article.php?ref=8232-WSGZ-8021&amp;auth=b7ecc37bd8f4a297efbafdce3d00a564">Contacter le support Steam pour une assistance sur l'accès à votre compte</a>
+			</div>
+		</div>
+		<div class="modal_buttons" id="auth_buttonsets">
+			<div class="auth_buttonset" id="auth_buttonset_entercode" style="display: none;">
+				<a href="javascript:SubmitAuthCode(%20'entrer%20un%20nom%20familier%20ici'%20);" class="auth_button leftbtn">
+					<h3>J'ai reçu le message</h3>
+					<h5>et j'ai saisi le code d'accès spécial ci-dessus</h5>
+				</a>
+				<a href="javascript:SetEmailAuthModalState(%20'checkspam'%20);" class="auth_button">
+					<h3>Quel message ?</h3>
+					<h5>Je n'ai reçu aucun message du support Steam...</h5>
+				</a>
+				<div style="clear: left;"></div>
+			</div>
+			<div class="auth_buttonset" id="auth_buttonset_checkspam" style="display: none;">
+				<a href="javascript:SubmitAuthCode(%20'entrer%20un%20nom%20familier%20ici'%20);" class="auth_button leftbtn">
+					<h3>Trouvé !</h3>
+					<h5>et j'ai saisi mon code d'accès spécial ci-dessus</h5>
+				</a>
+				<a href="javascript:SetEmailAuthModalState(%20'help'%20);" class="auth_button">
+					<h3>Toujours pas de chance...</h3>
+					<h5>Je n'ai aucun message du support Steam...</h5>
+				</a>
+				<div style="clear: left;"></div>
+			</div>
+			<div class="auth_buttonset" id="auth_buttonset_success" style="display: none;">
+				<div class="auth_button auth_button_spacer">
+				</div>
+				<a href="javascript:OnEmailAuthSuccessContinue();" class="auth_button" id="success_continue_btn">
+					<h3 style="padding-top: 20px;">Passer à Steam !</h3>
+				</a>
+				<div style="clear: left;"></div>
+			</div>
+			<div class="auth_buttonset" id="auth_buttonset_incorrectcode" style="display: none;">
+				<a href="javascript:SubmitAuthCode(%20'entrer%20un%20nom%20familier%20ici'%20);" class="auth_button leftbtn">
+					<h3>Je veux réessayer</h3>
+					<h5>et j'ai saisi mon code d'accès spécial une nouvelle fois ci-dessus</h5>
+				</a>
+				<a href="javascript:SetEmailAuthModalState(%20'help'%20);" class="auth_button">
+					<h3>Aidez-moi</h3>
+					<h5>Je pense que j'ai besoin de l'aide du support Steam...</h5>
+				</a>
+				<div style="clear: left;"></div>
+			</div>
+			<div class="auth_buttonset" id="auth_buttonset_waiting" style="display: none;">
+			</div>
+		</div>
+		
+		<div style="" id="auth_details_computer_name" class="auth_details_messages">
+			Pour reconnaître facilement ce navigateur parmi la liste des 
+appareils autorisés par Steam Guard, donnez-lui un petit nom (au moins 6
+ caractères).        </div>
+        
+
+	</div>
+</div>
+
+<div id="loginIPTModal" class="modal_frame" style="display:none;">
+	<div class="modal_top_band">
+		<div class="modal_close"><a href="javascript:hideModal(%20'loginIPTModal'%20)"><img src="Connexion_fichiers/x9x9.gif" border="0" height="9" width="9"></a></div>
+	</div>
+	<div class="modal_box">
+		<div class="auth_message_area">
+			<div id="" class="auth_icon ipt_icon">
+			</div>
+			<div class="auth_messages" id="">
+				<div class="auth_message" id="">
+					<h1>Désolé</h1>
+					<p>Vous ne pouvez pas accéder à ce compte sur cet ordinateur sans autorisation supplémentaire.</p>
+				</div>
+			</div>
+		</div>
+		<div id="" class="auth_details_messages">
+			<div class="auth_details">
+				Veuillez contacter le support Steam pour recevoir de l'aide d'un 
+membre de notre équipe. Les demandes légitimes d'aide pour accéder à un 
+compte sont notre priorité numéro un.			</div>
+		</div>
+		<div class="authcode_entry_area">
+		</div>
+		<div class="modal_buttons" id="">
+			<div class="auth_buttonset">
+				<a href="https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&amp;auth=e39b5c227cffc8ae65414aba013e5fef" class="auth_button leftbtn">
+					<h3>En savoir plus</h3>
+					<h5>sur la technologie Intel® Identity Protection</h5>
+				</a>
+				<a href="https://support.steampowered.com/" class="auth_button">
+					<h3>Aidez-moi</h3>
+					<h5>Je pense que j'ai besoin de l'aide du support Steam...</h5>
+				</a>
+				<div style="clear: left;"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="modalBG" style="display: none;"></div>
+
+
+
+<div style="display: none;" class="miniprofile_hover"><div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="miniprofile_hover_inner shadow_content"></div><div class="hover_arrow left miniprofile_arrow"><div class="miniprofile_arrow_inner"></div></div><div class="hover_arrow right miniprofile_arrow"><div class="miniprofile_arrow_inner"></div></div></div></body></html>
